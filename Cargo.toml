@@ -12,4 +12,5 @@ members = [
 panic = "unwind"
 
 # LTO setting is disabled by default, because release mode is usually needed to develop app and compilation with LTO would take a lot of time
-#lto = "fat"
+# @inksplatters: enabling it
+lto = "fat"
