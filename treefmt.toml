@@ -1,0 +1,37 @@
+[formatter.nix]
+command = "nixpkgs-fmt"
+includes = ["*.nix"]
+
+
+[formatter.prettier]
+command = "prettier"
+options = ["--write"]
+includes = [
+    "*.json",
+    "*.md",
+    "*.yaml",
+]
+
+[formatter.rust]
+command = "rustfmt"
+options = ["--edition", "2018"]
+includes = ["*.rs"]
+
+[formatter.shell]
+command = "/bin/sh"
+options = [
+    "-euc",
+    """
+# First lint all the scripts
+shellcheck "$@"
+# Then format them
+shfmt -i 2 -s -w "$@"
+    """,
+    "--", # bash swallows the second argument when using -c
+]
+includes = ["*.sh"]
+
+
+[formatter.python]
+command = "black"
+includes = ["*.py"]
