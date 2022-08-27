@@ -22,15 +22,9 @@
         # Provided by treefmt-flake.flakeModule
         treefmt.formatters = {
           inherit (pkgs)
-            shfmt
-            shellcheck
-            rustfmt
             nixpkgs-fmt;
-          inherit (pkgs.python39Packages)
-            black
-            mdformat;
-
         };
+
         devShells = {
 
           default = pkgs.mkShell {
@@ -54,7 +48,6 @@
           };
 
         };
-
 
 
 
