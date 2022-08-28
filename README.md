@@ -3,6 +3,7 @@
 **Czkawka** (_tch•kav•ka_ (IPA: [ʈ͡ʂkafka]), "hiccup" in Polish) is a simple, fast and free app to remove unnecessary files from your computer.
 
 ## Features
+
 - Written in memory-safe Rust
 - Amazingly fast - due to using more or less advanced algorithms and multithreading
 - Free, Open Source without ads
@@ -28,21 +29,25 @@
 ![Czkawka](https://user-images.githubusercontent.com/41945903/145280350-506f7e94-4db0-4de7-a68d-6e7c26bbd2bf.gif)
 
 ## Supported OS
-Linux - Ubuntu 22.04+, Fedora 36+, Alpine Linux 3.16+, Debian 12+ and a lot of more   
+
+Linux - Ubuntu 22.04+, Fedora 36+, Alpine Linux 3.16+, Debian 12+ and a lot of more  
 Windows - 7, 8.1, 10, 11  
 MacOS - 10.15+
 
 If you are looking for older version that use GTK 3 and have support for more OS(like e.g. Ubuntu 20.04), look at [4.1.0](https://github.com/qarmin/czkawka/releases/tag/4.1.0) or older versions.
 
 ## How do I use it?
+
 You can find the instructions on how to use Czkawka [**here**](instructions/Instruction.md).
 
 Some helpful tricks you can find [**here**](instructions/Instruction.md#tips-tricks-and-known-bugs)
 
 ## Installation
+
 Installation instructions with download links you can find [**here**](instructions/Installation.md).
 
 ## Compilation
+
 If you want to try and develop Czkawka or just use the latest available feature, you may want to look at the [**compilation instructions**](instructions/Compilation.md).
 
 ## Benchmarks
@@ -56,7 +61,7 @@ I prepared a disk and performed a test without any folder exceptions and with di
 I set the minimal file size to check to 1KB on all programs.
 
 | App                         | Executing Time |
-|:----------------------------|:--------------:|
+| :-------------------------- | :------------: |
 | FSlint 2.4.7 (First Run)    |      86s       |
 | FSlint 2.4.7 (Second Run)   |      43s       |
 | Czkawka 3.0.0 (First Run)   |       8s       |
@@ -66,12 +71,11 @@ I set the minimal file size to check to 1KB on all programs.
 
 I used Mprof for checking memory usage of FSlint and DupeGuru, and Heaptrack for Czkawka.
 
-| App             | Idle Ram | Max Operational Ram Usage | Stabilized after search |
-|:----------------|:--------:|:-------------------------:|:-----------------------:|
-| FSlint 2.4.7    |  62 MB   |          164 MB           |         158 MB          |
-| Dupeguru 4.1.1  |  90 MB   |          170 MB           |         166 MB          |
-| Czkawka 3.0.0   |  12 MB   |          122 MB           |          60 MB          |
-
+| App            | Idle Ram | Max Operational Ram Usage | Stabilized after search |
+| :------------- | :------: | :-----------------------: | :---------------------: |
+| FSlint 2.4.7   |  62 MB   |          164 MB           |         158 MB          |
+| Dupeguru 4.1.1 |  90 MB   |          170 MB           |         166 MB          |
+| Czkawka 3.0.0  |  12 MB   |          122 MB           |          60 MB          |
 
 In Dupeguru, I enabled checking images with different dimensions to match Czkawka behavior.
 Both apps use a caching mechanism, so the second scan is really fast.
@@ -79,7 +83,7 @@ Both apps use a caching mechanism, so the second scan is really fast.
 Similar images which check 10949 files that occupied 6.6 GB
 
 | App                         | Scan time |
-|:----------------------------|:---------:|
+| :-------------------------- | :-------: |
 | Czkawka 3.0.0 (First Run)   |   276s    |
 | Czkawka 3.0.0 (Second Run)  |    1s     |
 | DupeGuru 4.1.1 (First Run)  |   539s    |
@@ -87,60 +91,68 @@ Similar images which check 10949 files that occupied 6.6 GB
 
 Similar images which check 349 image files that occupied 1.7 GB
 
-| App                         | Scan time  |
-|:----------------------------|:----------:|
-| Czkawka 3.0.0 (First Run)   |    54s     |
-| Czkawka 3.0.0 (Second Run)  |     1s     |
-| DupeGuru 4.1.1 (First Run)  |    55s     |
-| DupeGuru 4.1.1 (Second Run) |     1s     |
+| App                         | Scan time |
+| :-------------------------- | :-------: |
+| Czkawka 3.0.0 (First Run)   |    54s    |
+| Czkawka 3.0.0 (Second Run)  |    1s     |
+| DupeGuru 4.1.1 (First Run)  |    55s    |
+| DupeGuru 4.1.1 (Second Run) |    1s     |
 
 ## Comparison to other tools
 
 Bleachbit is a master at finding and removing temporary files, while Czkawka only finds the most basic ones. So these two apps shouldn't be compared directly or be considered as an alternative to one another.
 
-|                          |   Czkawka   |   FSlint   |     DupeGuru      |  Bleachbit  |
-|:------------------------:|:-----------:|:----------:|:-----------------:|:-----------:|
-|         Language         |    Rust     |   Python   |   Python/Obj-C    |   Python    |
-|            OS            | Lin,Mac,Win |    Lin     |    Lin,Mac,Win    | Lin,Mac,Win |
-|        Framework         |    GTK 4    |   PyGTK2   | Qt 5 (PyQt)/Cocoa |   PyGTK3    |
-|     Duplicate finder     |      •      |     •      |         •         |             |
-|       Empty files        |      •      |     •      |                   |             |
-|      Empty folders       |      •      |     •      |                   |             |
-|     Temporary files      |      •      |     •      |                   |      •      |
-|        Big files         |      •      |            |                   |             |
-|      Similar images      |      •      |            |         •         |             |
-|      Similar videos      |      •      |            |                   |             |
-|  Music duplicates(tags)  |      •      |            |         •         |             |
-|     Invalid symlinks     |      •      |     •      |                   |             |
-|       Broken files       |      •      |            |                   |             |
-|      Names conflict      |      •      |     •      |                   |             |
-| Invalid names/extensions |      •      |     •      |                   |             |
-|    Installed packages    |             |     •      |                   |             |
-|          Bad ID          |             |     •      |                   |             |
-|  Non stripped binaries   |             |     •      |                   |             |
-|   Redundant whitespace   |             |     •      |                   |             |
-|    Overwriting files     |             |     •      |                   |      •      |
-|    Multiple languages    |      •      |     •      |         •         |      •      |
-|      Cache support       |      •      |            |         •         |             |
-|  In active development   |     Yes     |     No     |        Yes        |     Yes     |
+|                          |   Czkawka   | FSlint |     DupeGuru      |  Bleachbit  |
+| :----------------------: | :---------: | :----: | :---------------: | :---------: |
+|         Language         |    Rust     | Python |   Python/Obj-C    |   Python    |
+|            OS            | Lin,Mac,Win |  Lin   |    Lin,Mac,Win    | Lin,Mac,Win |
+|        Framework         |    GTK 4    | PyGTK2 | Qt 5 (PyQt)/Cocoa |   PyGTK3    |
+|     Duplicate finder     |      •      |   •    |         •         |             |
+|       Empty files        |      •      |   •    |                   |             |
+|      Empty folders       |      •      |   •    |                   |             |
+|     Temporary files      |      •      |   •    |                   |      •      |
+|        Big files         |      •      |        |                   |             |
+|      Similar images      |      •      |        |         •         |             |
+|      Similar videos      |      •      |        |                   |             |
+|  Music duplicates(tags)  |      •      |        |         •         |             |
+|     Invalid symlinks     |      •      |   •    |                   |             |
+|       Broken files       |      •      |        |                   |             |
+|      Names conflict      |      •      |   •    |                   |             |
+| Invalid names/extensions |      •      |   •    |                   |             |
+|    Installed packages    |             |   •    |                   |             |
+|          Bad ID          |             |   •    |                   |             |
+|  Non stripped binaries   |             |   •    |                   |             |
+|   Redundant whitespace   |             |   •    |                   |             |
+|    Overwriting files     |             |   •    |                   |      •      |
+|    Multiple languages    |      •      |   •    |         •         |      •      |
+|      Cache support       |      •      |        |         •         |             |
+|  In active development   |     Yes     |   No   |        Yes        |     Yes     |
 
 ## Other apps
-There are many similar applications to Czkawka on the Internet, which do some things better and some things worse:  
+
+There are many similar applications to Czkawka on the Internet, which do some things better and some things worse:
+
 ### GUI
+
 - [DupeGuru](https://github.com/arsenetar/dupeguru) - Many options to customize; great photo compare tool
 - [FSlint](https://github.com/pixelb/fslint) - A little outdated, but still have some tools not available in Czkawka
 - [AntiDupl.NET](https://github.com/ermig1979/AntiDupl) - Shows a lot of metadata of compared images
 - [Video Duplicate Finder](https://github.com/0x90d/videoduplicatefinder) - Finds similar videos(surprising, isn't it), supports video thumbnails
+
 ### CLI
+
 Due to limited time, the biggest emphasis is on the GUI version so if you are looking for really good and feature-packed console apps, then take a look at these:
+
 - [Fclones](https://github.com/pkolaczk/fclones) - One of the fastest tools to find duplicates; it is written also in Rust
 - [Rmlint](https://github.com/sahib/rmlint) - Nice console interface and also is feature packed
 - [RdFind](https://github.com/pauldreik/rdfind) - Fast, but written in C++ ¯\\\_(ツ)\_/¯
 
 ## Contributions
+
 Contributions to this repository are welcome.
 
 You can help by creating:
+
 - Bug reports - memory leaks, unexpected behavior, crashes
 - Feature proposals - proposal to change/add/delete some features
 - Pull Requests - implementing a new feature yourself or fixing bugs.
@@ -150,23 +162,26 @@ You can help by creating:
 - External contributions - App use big number of external libraries like [lofty](https://github.com/Serial-ATA/lofty-rs), [image-rs](https://github.com/image-rs/image) or [symphonia](https://github.com/pdeljanov/Symphonia) so improving this libraries will automatically improve Czkawka
 
 You can also help by doing other things:
+
 - Creating text articles - [LinuxUprising](https://www.linuxuprising.com/2021/03/find-and-remove-duplicate-files-similar.html) or [Ubunlog](https://ubunlog.com/en/czkawka-finds-and-removes-empty-and-broken-duplicate-files/)
 - Adding Czkawka to repositories - [Alpine Linux](https://pkgs.alpinelinux.org/packages?name=czkawka&branch=edge) or [NixOS](https://github.com/NixOS/nixpkgs/pull/116441) or [OpenMandriva](https://github.com/OpenMandrivaAssociation/czkawka)
 - Creating videos - [First Video](https://www.youtube.com/watch?v=CWlRiTD4vDc) or [Spanish Tutorial](https://www.youtube.com/watch?v=V9x-pHJRmKY)
 - Recommending it to others
 
 ## Name
+
 Czkawka is a Polish word which means _hiccup_.
 
 I chose this name because I wanted to hear people speaking other languages pronounce it, so feel free to spell it the way you want.
 
-This name is not as bad as it seems, because I was also thinking about using words like _żółć_, _gżegżółka_ or _żołądź_, 
+This name is not as bad as it seems, because I was also thinking about using words like _żółć_, _gżegżółka_ or _żołądź_,
 but I gave up on these ideas because they contained Polish characters, which would cause difficulty in searching for the project.
 
-At the beginning of the program creation, if the response concerning the name was unanimously negative, I prepared myself 
+At the beginning of the program creation, if the response concerning the name was unanimously negative, I prepared myself
 for a possible change of the name of the program, and the opinions were extremely mixed.
 
 ## License
+
 Code is distributed under MIT license.
 
 Icon was created by [jannuary](https://github.com/jannuary) and licensed CC-BY-4.0.
@@ -188,4 +203,5 @@ Thanks also to all the people who create patches for this program, make it avail
 Also, I really appreciate work of people that create crates on which Czkawka is based and for that I try to report bugs to make it even better.
 
 ## Donations
+
 If you are using the app, I would appreciate a donation for its further development, which can be done [here](https://github.com/sponsors/qarmin).

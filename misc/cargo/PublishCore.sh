@@ -11,8 +11,7 @@ git checkout "$NUMBER"
 
 cd "$CZKAWKA_PATH/czkawka_core"
 cargo package
-if [ $(echo $?) != "0"  ]
-then
+if [ $(echo $?) != "0" ]; then
   echo "Cargo package failed CORE"
   exit 1
 fi
@@ -21,4 +20,3 @@ git reset --hard
 cd "$CZKAWKA_PATH/czkawka_core"
 cargo publish
 git reset --hard
-

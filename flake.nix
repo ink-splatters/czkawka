@@ -5,11 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
 
-    treefmt-flake = {
-      url = "github:srid/treefmt-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-
-    };
+    treefmt-flake.url = "github:srid/treefmt-flake";
   };
 
   outputs = { self, flake-parts, nixpkgs, treefmt-flake, ... }:
@@ -21,8 +17,12 @@
 
         # Provided by treefmt-flake.flakeModule
         treefmt.formatters = {
-          inherit (pkgs)
-            nixpkgs-fmt;
+          inherit (pkgs) nixpkgs-fmt rustfmt shfmt;
+
+          inherit (pkgs.python3Packages) black;
+          inherit (pkgs.nodePackages) prettier;
+
+
         };
 
         devShells = {
@@ -49,8 +49,9 @@
 
         };
 
-
-
       };
     };
+
 }
+
+

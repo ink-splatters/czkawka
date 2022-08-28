@@ -1,4 +1,5 @@
 ## Version 5.0.1 - 03.08.2022r
+
 - Fixed problem with removing ending slash with empty disk window path - [975](https://github.com/qarmin/czkawka/commit/97563a7b2a70fb5fcf6463f28069e6ea3b0ff5c2)
 - Added to CLI bad extensions mode - [#795](https://github.com/qarmin/czkawka/pull/795)
 - Restore default sorting method in CLI where finding biggest files - [5d7](https://github.com/qarmin/czkawka/commit/5d79dc7ccfee6d5426e37c4e6a860fa555c5927a)
@@ -7,13 +8,14 @@
 - Added more info about new requirements on Linux - [#795](https://github.com/qarmin/czkawka/pull/795)
 
 ## Version 5.0.0 - 28.07.2022r
+
 - GUI ported to use GTK 4 - [#466](https://github.com/qarmin/czkawka/pull/466)
 - Use multithreading and improved algorithm to compare image hashes - [#762](https://github.com/qarmin/czkawka/pull/762)
 - Resize preview with window - [#466](https://github.com/qarmin/czkawka/pull/466)
 - Fix removing only one item from list view - [#466](https://github.com/qarmin/czkawka/pull/466)
 - Fix showing help command in duplicate CLI mode - [#720](https://github.com/qarmin/czkawka/pull/720)
 - Fix freeze when not choosing any tag in similar music mode - [#732](https://github.com/qarmin/czkawka/pull/732)
-- Fix preview of files with non-lowercase extensions - [#694](https://github.com/qarmin/czkawka/pull/694) 
+- Fix preview of files with non-lowercase extensions - [#694](https://github.com/qarmin/czkawka/pull/694)
 - Read more tags from music files - [#705](https://github.com/qarmin/czkawka/pull/705)
 - Improve checking for invalid extensions - [#705](https://github.com/qarmin/czkawka/pull/705), [#747](https://github.com/qarmin/czkawka/pull/747), [#749](https://github.com/qarmin/czkawka/pull/749)
 - Support for finding invalid PDF files - [#705](https://github.com/qarmin/czkawka/pull/705)
@@ -29,6 +31,7 @@
 - Option to exclude files from other filesystems in GUI(Linux) - [#776](https://github.com/qarmin/czkawka/pull/776)
 
 ## Version 4.1.0 - 24.04.2022r
+
 - New mode - finding files whose content not match with their extension - [#678](https://github.com/qarmin/czkawka/pull/678)
 - Builtin icons - no more invalid, theme/OS dependant icons - [#659](https://github.com/qarmin/czkawka/pull/659)
 - Big(usually 2x) speedup of showing previews of images(both previews in scan and compare window) - [#660](https://github.com/qarmin/czkawka/pull/660)
@@ -46,6 +49,7 @@
 - Prevent from getting non respond app notification from display servers - [#625](https://github.com/qarmin/czkawka/pull/625)
 
 ## Version 4.0.0 - 20.01.2022r
+
 - Multithreading support for collecting files to check(2/3x speedup on 4 thread processor and SSD) - [#502](https://github.com/qarmin/czkawka/pull/502), [#504](https://github.com/qarmin/czkawka/pull/504)
 - Add multiple translations - Polish, Italian, French, German, Russian ... - [#469](https://github.com/qarmin/czkawka/pull/469), [#508](https://github.com/qarmin/czkawka/pull/508), [5be](https://github.com/qarmin/czkawka/commit/5be801e76395855f07ab1da43cdbb8bd0b843834)
 - Add support for finding similar videos - [#460](https://github.com/qarmin/czkawka/pull/460)
@@ -68,26 +72,29 @@
 - Add support for raw images(NEF, CR2, KDC...) - [#532](https://github.com/qarmin/czkawka/pull/532)
 - Image compare performance and usability improvements - [#529](https://github.com/qarmin/czkawka/pull/529), [#528](https://github.com/qarmin/czkawka/pull/528), [#530](https://github.com/qarmin/czkawka/pull/530), [#525](https://github.com/qarmin/czkawka/pull/525)
 - Reorganize(unify) saving/loading data from file - [#524](https://github.com/qarmin/czkawka/pull/524)
-- Add "reference folders" -  [#516](https://github.com/qarmin/czkawka/pull/516)
+- Add "reference folders" - [#516](https://github.com/qarmin/czkawka/pull/516)
 - Add cache for similar music files - [#558](https://github.com/qarmin/czkawka/pull/558)
 
 ## Version 3.3.1 - 22.11.2021r
+
 - Fix crash when moving buttons [#457](https://github.com/qarmin/czkawka/pull/457)
 - Hide move button at start [c9ca230](https://github.com/qarmin/czkawka/commit/c9ca230dfd05e2166b2d68683b091cfd45037edd)
 
 ## Version 3.3.0 - 20.11.2021r
+
 - Select files by pressing space key [#415](https://github.com/qarmin/czkawka/pull/415)
-- Add additional info to printed errors [#446](https://github.com/qarmin/czkawka/pull/446) 
+- Add additional info to printed errors [#446](https://github.com/qarmin/czkawka/pull/446)
 - Add support for multiple image filters, hashes and sizes in similar images tool [#447](https://github.com/qarmin/czkawka/pull/447), [#448](https://github.com/qarmin/czkawka/pull/448)
 - Button to move files/folders to provided location [#449](https://github.com/qarmin/czkawka/pull/449)
 - Add non-clickable button to fix white theme [#450](https://github.com/qarmin/czkawka/pull/450)
 - Fixed freeze when opening in same thread file/folder [#448](https://github.com/qarmin/czkawka/pull/448)
-- Tool to check performance of different image filters and hash types and sizes [#447](https://github.com/qarmin/czkawka/pull/447) 
+- Tool to check performance of different image filters and hash types and sizes [#447](https://github.com/qarmin/czkawka/pull/447)
 - Add scheduled CI and pin it to support Rust 1.53.0 [7bb](https://github.com/qarmin/czkawka/commit/7bbdf742739a513b80d0cc06ba61dfafec976b23), [#431](https://github.com/qarmin/czkawka/pull/431)
 - Update snap file to use builtin rust plugin and update gnome extension [8f2](https://github.com/qarmin/czkawka/commit/8f232285e5c34bee6d5da8e1453d7f40a0ffd08d)
 - Disable from checking in similar images `webp`, `gif`, `bmp`, `ico` extension which caused crashes [#445](https://github.com/qarmin/czkawka/pull/446), [49e](https://github.com/qarmin/czkawka/commit/49effca169adb57b33f666757966d43b244319cc)
 
 ## Version 3.2.0 - 07.08.2021r
+
 - Use checkbox instead selection to select files [#392](https://github.com/qarmin/czkawka/pull/392)
 - Re-enable hardlink on windows - [#410](https://github.com/qarmin/czkawka/pull/410)
 - Fix symlink and harlink creating - [#409](https://github.com/qarmin/czkawka/pull/409)
@@ -104,6 +111,7 @@
 - Generate Minimal Appimage [#339](https://github.com/qarmin/czkawka/pull/339)
 
 ## Version 3.1.0 - 09.05.2021r
+
 - Clean README, by moving instructions to different files - [9aea6e9b](https://github.com/qarmin/czkawka/commit/9aea6e9b1ef5ac1e56ccd008e7456b80401179d0)
 - Fix excluded items on Windows - [#324](https://github.com/qarmin/czkawka/pull/324)
 - Center windows and add missing settings icon - [#323](https://github.com/qarmin/czkawka/pull/323)
@@ -111,7 +119,7 @@
 - Add desktop file to Snap - [018d5bebb](https://github.com/qarmin/czkawka/commit/018d5bebb0b297ba35529b03b8e2e68eb0a9b474), [ade2a756e2](https://github.com/qarmin/czkawka/commit/ade2a756e29c5ce5739d6268fcab7e76f59ed5f6)
 - Customize minimum file size of cached records - [#321](https://github.com/qarmin/czkawka/pull/321)
 - Update benchmarks - [2044b9185](https://github.com/qarmin/czkawka/commit/2044b91852fea89dfaf10dc1ab79c1d00e9e0c12)
-- Rearrange Instruction  - [8e7ac4a2d7f5b0](https://github.com/qarmin/czkawka/commit/8e7ac4a2d7f5b0beba2552581fb3a0d19c2efeb5)
+- Rearrange Instruction - [8e7ac4a2d7f5b0](https://github.com/qarmin/czkawka/commit/8e7ac4a2d7f5b0beba2552581fb3a0d19c2efeb5)
 - Add info that Czkawka and Bleachbit are not alternatives to each other - [30602a486](https://github.com/qarmin/czkawka/commit/30602a486f6ade6f9b7b91a73708225b4f4c2a7d)
 - Fix crashes with too small message queue - [#316](https://github.com/qarmin/czkawka/pull/316)
 - Fix a little unsorted results - [#304](https://github.com/qarmin/czkawka/pull/304)
@@ -120,11 +128,12 @@
 - Update to Rust 1.5.1 - [#302](https://github.com/qarmin/czkawka/pull/302)
 
 ## Version 3.0.0 - 11.03.2021r
+
 - Option to not ignore hardlinks - [#273](https://github.com/qarmin/czkawka/pull/273)
 - Hardlink support for GUI - [#276](https://github.com/qarmin/czkawka/pull/276)
 - New settings window - [#262](https://github.com/qarmin/czkawka/pull/262)
 - Unify file removing - [#278](https://github.com/qarmin/czkawka/pull/278)
-- Dryrun in duplicates CLI  - [#277](https://github.com/qarmin/czkawka/pull/277)
+- Dryrun in duplicates CLI - [#277](https://github.com/qarmin/czkawka/pull/277)
 - Option to turn off cache - [#263](https://github.com/qarmin/czkawka/pull/263)
 - Update Image dependency and fix crashes - [#270](https://github.com/qarmin/czkawka/pull/270), [e3aca69](https://github.com/qarmin/czkawka/commit/e3aca69499966499413e4b7cd4d1037bec6a5d68)
 - Add confirmation dialog when trying to remove all files in group - [#281](https://github.com/qarmin/czkawka/pull/281)
@@ -133,10 +142,11 @@
 - Allow to put files to trash instead fully remove them - [#284](https://github.com/qarmin/czkawka/pull/284)
 
 ## Version 2.4.0 - 22.02.2021r
+
 - Add about dialog - [#226](https://github.com/qarmin/czkawka/pull/226)
 - Remove checking for ico in similar images - [#227](https://github.com/qarmin/czkawka/pull/227)
-- Change progress dialog to progress window  - [#229](https://github.com/qarmin/czkawka/pull/229)
-- Restore snap confinement  - [#218](https://github.com/qarmin/czkawka/pull/218), [8dcb718](https://github.com/qarmin/czkawka/commit/8dcb7188434e1c1728368642e17ccec29a4b372d)
+- Change progress dialog to progress window - [#229](https://github.com/qarmin/czkawka/pull/229)
+- Restore snap confinement - [#218](https://github.com/qarmin/czkawka/pull/218), [8dcb718](https://github.com/qarmin/czkawka/commit/8dcb7188434e1c1728368642e17ccec29a4b372d)
 - Add support for CRC32 and XXH3 hash - [#243](https://github.com/qarmin/czkawka/pull/243)
 - Add delete method to replace duplicate files with hard links - [#236](https://github.com/qarmin/czkawka/pull/236)
 - Add checking for broken music opt-in - [#249](https://github.com/qarmin/czkawka/pull/249)
@@ -150,15 +160,18 @@
 - Disable for now broken tga and gif files - [#270](https://github.com/qarmin/czkawka/pull/270)
 
 ## Version 2.3.2 - 21.01.2021r
+
 - Add support for moving selection by keyboard to update similar image preview [#223](https://github.com/qarmin/czkawka/pull/223)
 
 This version is only needed to test flatpak build
 
 ## Version 2.3.1 - 20.01.2021r
+
 - Added flatpak support - [#203](https://github.com/qarmin/czkawka/pull/203)
 - Spell fixes - [#222](https://github.com/qarmin/czkawka/pull/222), [#219](https://github.com/qarmin/czkawka/pull/219)
 
 ## Version 2.3.0 - 15.01.2021r
+
 - Add cache for duplicate finder - [#205](https://github.com/qarmin/czkawka/pull/205)
 - Add cache for broken files - [#204](https://github.com/qarmin/czkawka/pull/204)
 - Decrease ram usage - [#212](https://github.com/qarmin/czkawka/pull/212)
@@ -171,6 +184,7 @@ This version is only needed to test flatpak build
 - Fix error when closing dialog progress by X - [#199](https://github.com/qarmin/czkawka/pull/199)
 
 ## Version 2.2.0 - 11.01.2021r
+
 - Adds Mac GUI - [#160](https://github.com/qarmin/czkawka/pull/160)
 - Use master gtk plugin again - [#179](https://github.com/qarmin/czkawka/pull/179)
 - Only show preview when 1 image is selected - [#183](https://github.com/qarmin/czkawka/pull/183)
@@ -180,6 +194,7 @@ This version is only needed to test flatpak build
 - Reorganize GUI Code(no visible changes) - [#184](https://github.com/qarmin/czkawka/pull/184), [#184](https://github.com/qarmin/czkawka/pull/184), [#189](https://github.com/qarmin/czkawka/pull/189), [#190](https://github.com/qarmin/czkawka/pull/190), [#194](https://github.com/qarmin/czkawka/pull/194)
 
 ## Version 2.1.0 - 31.12.2020r
+
 - Hide preview when deleting images or symlinking it - [#167](https://github.com/qarmin/czkawka/pull/167)
 - Add manual adding of directories - [#165](https://github.com/qarmin/czkawka/pull/165), [#168](https://github.com/qarmin/czkawka/pull/168)
 - Add resizable top panel - [#164](https://github.com/qarmin/czkawka/pull/164)
@@ -190,6 +205,7 @@ This version is only needed to test flatpak build
 - Modernize popovers code and simplify later changes - [#137](https://github.com/qarmin/czkawka/pull/137)
 
 ## Version 2.0.0 - 23.12.2020r
+
 - Add Snap support - [ee3d4](https://github.com/qarmin/czkawka/commit/ee3d450552cd0c37a114b05c557ff9381ef92466)
 - Select longer names by default - [#113](https://github.com/qarmin/czkawka/pull/113)
 - Add setting for deletion confirmation dialog - [#114](https://github.com/qarmin/czkawka/pull/114)
@@ -212,15 +228,18 @@ This version is only needed to test flatpak build
 - Added instruction - [58e6221a](https://github.com/qarmin/czkawka/commit/58e6221a0e02d17d07c71152f56b948f616751a8), [598aec345e](https://github.com/qarmin/czkawka/commit/598aec345e9f5ac199fc3d642c0699d5228100a6), [afaa402b](https://github.com/qarmin/czkawka/commit/afaa402b31526aa8e6b47f3670bc62b26ad9f60f)
 
 ## Version 1.5.1 - 08.12.2020r
-- Fix errors in progress bar caused by dividing by 0  - [#109](https://github.com/qarmin/czkawka/pull/109)
+
+- Fix errors in progress bar caused by dividing by 0 - [#109](https://github.com/qarmin/czkawka/pull/109)
 - Add option to save file, store settings and load them - [#108](https://github.com/qarmin/czkawka/pull/108)
 - Center dialog to current window - [a04](https://github.com/qarmin/czkawka/commit/a047380dbe8aa4d04f9c482364469e21d231fab2)
 
 ## Version 1.5.0 - 02.12.2020r
+
 - Added progress bar - [#106](https://github.com/qarmin/czkawka/pull/106)
 - Removed unused buttons - [#107](https://github.com/qarmin/czkawka/pull/107)
 
 ## Version 1.4.0 - 09.11.2020r
+
 - Multithreading Support to most modules - [#98](https://github.com/qarmin/czkawka/pull/98) [#99](https://github.com/qarmin/czkawka/pull/99) [#100](https://github.com/qarmin/czkawka/pull/100) [#101](https://github.com/qarmin/czkawka/pull/101)
 - Simplify GUI code [#96](https://github.com/qarmin/czkawka/pull/96)
 - Group similar images - [#97](https://github.com/qarmin/czkawka/pull/97)
@@ -229,6 +248,7 @@ This version is only needed to test flatpak build
 - Add new similarity level - [#104](https://github.com/qarmin/czkawka/pull/104)
 
 ## Version 1.3.0 - 02.11.2020r
+
 - Appimage support - [#77](https://github.com/qarmin/czkawka/pull/77)
 - Removed warnings about non-existed excluded directories - [#79](https://github.com/qarmin/czkawka/pull/79)
 - Updated README - [8ec](https://github.com/qarmin/czkawka/commit/8ecde0fc9adb3e6cedf432c4ba749e698b645a7a)
@@ -240,11 +260,13 @@ This version is only needed to test flatpak build
 - Implemented finding duplicates by music tags - [#95](https://github.com/qarmin/czkawka/pull/95)
 
 ## Version 1.2.1 - 17.10.2020r
+
 - Make image similarity search significantly faster. [#72](https://github.com/qarmin/czkawka/pull/72)
 - Improve similar images GUI a little and add sorting to Similarity Enum [#73](https://github.com/qarmin/czkawka/pull/73)
 - Improve deleting files in Similar files in GUI [#75](https://github.com/qarmin/czkawka/pull/75)
 
 ## Version 1.2.0 - 15.10.2020r
+
 - Replace String with PathBuf for paths [#59](https://github.com/qarmin/czkawka/pull/59)
 - Add test suite to PR [#65](https://github.com/qarmin/czkawka/pull/65)
 - Support for finding similar images to CLI [#66](https://github.com/qarmin/czkawka/pull/66)
@@ -254,6 +276,7 @@ This version is only needed to test flatpak build
 - Add support for opening files/folders from GUI with double-click [#70](https://github.com/qarmin/czkawka/pull/70)
 
 ## Version 1.1.0 - 10.10.2020r
+
 - Windows support [#58](https://github.com/qarmin/czkawka/pull/58)
 - Improve code quality/Simplify codebase [#52](https://github.com/qarmin/czkawka/pull/52)
 - Fixed skipping some correct results in specific situations [#52](https://github.com/qarmin/czkawka/pull/52#discussion_r502613895)
@@ -263,6 +286,7 @@ This version is only needed to test flatpak build
 - Fixed removing directories which contains only empty directories from GUI [#57](https://github.com/qarmin/czkawka/pull/57)
 
 ## Version 1.0.1 - 06.10.2020r
+
 - Replaced default argument parser with StructOpt [#37](https://github.com/qarmin/czkawka/pull/37)
 - Added all(except macOS GTK build) builds to CI where can be freely downloaded [#41](https://github.com/qarmin/czkawka/pull/41) [#39](https://github.com/qarmin/czkawka/pull/39)
 - App can be downloaded also from Arch AUR and Cargo [#36](https://github.com/qarmin/czkawka/pull/36)
@@ -272,11 +296,13 @@ This version is only needed to test flatpak build
 - Added support for finding similar pictures in GUI [#69](https://github.com/qarmin/czkawka/issues/69)
 
 ## Version 1.0.0 - 02.10.2020r
+
 - Added confirmation dialog to delete button
 - Updated Readme
 - Tested a lot app, so I think that it version 1.0.0 can be freely released
 
 ## Version 0.1.4 - 01.10.2020r
+
 - Fixes -f default argument
 - Added save button to GUI
 - Cleaned a little code
@@ -291,6 +317,7 @@ This version is only needed to test flatpak build
 - Added Big, Temporary and Empty folders finder to GUI
 
 ## Version 0.1.3 - 27.09.2020r
+
 - Big code refactoring - now is a lot of easier create new modules and maintain old ones
 - Added finding empty files
 - Added new option to find duplicates by checking hash max 1MB of file
@@ -299,6 +326,7 @@ This version is only needed to test flatpak build
 - Simplify CLI help and improve it
 
 ## Version 0.1.2 - 26.09.2020r
+
 - Add basic search empty folders in GTK GUI
 - Remember place where button are placed
 - Read and parse more values from GUI
@@ -310,6 +338,7 @@ This version is only needed to test flatpak build
 - The biggest files support in CLI
 
 ## Version 0.1.1 - 20.09.2020r
+
 - Added images to readme
 - Better GTK buttons and glade file
 - Basic search in GTK
@@ -325,6 +354,7 @@ This version is only needed to test flatpak build
 - Add basic idea config to misc folder
 
 ## Version 0.1.0 - 07.09.2020r
+
 - Initial Version
 - Duplicate file finder
 - Empty folder finder
